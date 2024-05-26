@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Karla",sans-serif;
+  background-color: #0B2434;
+}
+h1
+ {
+  padding-block: 0.5em;
+}
+.game-explanation {
+  text-align: center;
+  padding-bottom: 1em;
+  font-size: 1.5rem;
+}
+.game-title {
+  font-size: 2.5rem;
+}
+.container{
+  width: 100%;
+  margin: auto auto;
+  padding: 0.2em;
+  height: 100%;
+}
+
+.tenzies-container{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+  padding: 0.2em;
+  height: 95%;
+  
+}
+button {
+  color: white;
+  background-color: #5035FF;
+  border-radius: 4px;
+  padding: 0.5em 1.5em;
+  font-family: "Karla";
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  /* border: none; */
+}
+button :active {
+  box-shadow: inset 5px 5px 10px -3px rgba(0,0,0,0.17);
+}
+button :focus{
+  outline: none;
+}
+
+.face {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(3 ,1fr);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.3);
+  height: 96px;
+  width: 96px;
+}
+.dot {
+  
+  background-color: 		#953553;
+  border-radius: 50%;
+  height: 16px;
+  width: 16px;
+  place-self: center;
+}
+.top {
+  grid-row-start: 1;
+}
+.middle {
+  grid-row-start: 2;
+}
+.bottom {
+  grid-row-start: 3;
+}
+.left {
+  grid-column-start: 1;
+}
+.center {
+  grid-column-start: 2;
+}
+.right {
+  grid-column-start: 3;
+}
+.square :focus,
+.square:hover {
+  cursor: pointer;
+}
+.square-clicked {
+  background-color: #59E391;
+}
+.dice-container {
+  margin-block: 3em;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(2, 1fr)
+}
+.face:last-of-type {
+  grid-column-start:2;
+}
+
+@media (min-width: 350px) {
+  
+  .dice-container { grid-template-columns: repeat(3, 1fr); }
+  
+}
+@media (min-width: 650px) {
+  
+  .face:last-of-type {
+    grid-column-start:auto;
+  }
+  
+  .dice-container { grid-template-columns: repeat(5, 1fr); }
+}
+@media (min-width: 900px) {
+  .dice-container { grid-template-columns: repeat(5, 1fr); }
+  .container {
+    width: 95%;
+    padding: 4em;
+  }
+  .tenzies-container {
+    width: 95%;
+    padding: 4em;
+  }
+}
+@media (min-width: 1500px) {
+  
+  .face {
+    height: 200px;
+    width: 200px;
+  }
+  .dot {
+    width: 32px;
+    height: 32px;
+  }
+  .dice-container { grid-template-columns: repeat(5, 1fr); }
+}
+.best-score {
+  color: 	#007f00;
+}
+.timer {
+  border: 2px solid #0B2434;
+  font-size: 2rem;
+}
+.best-time{
+  color: 	#0E4C92;
+  text-align: center;
+}
+
