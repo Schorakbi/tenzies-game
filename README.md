@@ -1,3 +1,6 @@
+# Try the app 
+You can go and try the app by clicking on this link : https://wonderful-crostata-62a2b4.netlify.app
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
